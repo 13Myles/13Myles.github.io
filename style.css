@@ -3,54 +3,35 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
 /* Navigation Menu Styling */
 nav {
-    background-color: #333; /* Dark background for the menu */
+    background-color: #333; /* Dark background */
     padding: 10px 0;
 }
 
 nav ul {
-    list-style-type: none; /* Remove default list styling */
+    list-style-type: none; /* Remove default list styles */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the menu items */
+    justify-content: center; /* Center the menu */
 }
 
 nav ul li {
-    margin: 0 15px; /* Add spacing between menu items */
+    margin: 0 15px; /* Spacing between items */
 }
 
 nav ul li a {
-    color: #ffffff; /* White text for menu items */
+    color: #fff; /* White text */
     text-decoration: none; /* Remove underline */
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
-    padding: 5px 10px; /* Add padding for clickable area */
-    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background-color: #555; /* Slightly lighter background on hover */
-    color: #ffcc00; /* Gold text color on hover */
-}
-
-/* Header Section Styling */
-header {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    color: #444;
-}
-
-header p {
-    font-size: 1.2em;
-    color: #666;
+    color: #ffcc00; /* Gold text on hover */
 }

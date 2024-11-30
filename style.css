@@ -51,7 +51,45 @@ a.active,
 a:hover {
   background: #1b9bff;
   transition: .5s;
+nav {
+  background: #e60082;
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
+
+label.logo {
+  display: none; /* Hide the logo if you only want centered links */
+}
+
+nav ul {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Flexbox for inline links */
+  gap: 20px; /* Add space between menu items */
+}
+
+nav ul li {
+  line-height: 80px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
 
 .checkbtn {
   font-size: 22px;

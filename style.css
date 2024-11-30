@@ -6,11 +6,21 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-left: -16px;
+    margin-right: -16px;
+}
 
 /* Navigation Menu Styling */
 nav {
     background-color: #333; /* Dark background */
     padding: 10px 0;
+    
 }
 
 nav ul {

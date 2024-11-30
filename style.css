@@ -1,126 +1,110 @@
-/* Google Fonts Link */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
+/* Reset some default styles for cross-browser consistency */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* General body styling */
 body {
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Navigation bar styling */
 nav {
-  background: #e60082;
-  text-align: center;
-  height: 80px;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007acc;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-label.logo {
-  color: white;
-  font-size: 25px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
-}
-
+/* Navigation bar links */
 nav ul {
-  float: right;
-  margin-right: 20px;
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-a.active,
-a:hover {
-  background: #1b9bff;
-  transition: .5s;
+nav ul li a:hover {
+    color: #f4f4f9;
 }
 
+/* Mobile menu button */
 .checkbtn {
-  font-size: 22px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 30px;
-  cursor: pointer;
-  display: none;
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
 }
 
-#check {
-  display: none;
+/* Checkbox input */
+input[type="checkbox"] {
+    display: none;
 }
 
-@media (max-width: 1050px) {
-  label.logo {
-    padding-left: 30px;
-  }
+/* Mobile responsive menu */
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
 
-  nav ul li a {
-    font-size: 16px;
-  }
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #007acc;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    input[type="checkbox"]:checked ~ ul {
+        transform: translateY(0);
+    }
 }
 
-/* Responsive media query code for small screen */
-@media (max-width: 890px) {
-  .checkbtn {
-    display: block;
-  }
-
-  label.logo {
-    font-size: 22px;
-  }
-
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
+/* Main content styling */
+main {
     text-align: center;
-    transition: all .5s;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  a:hover,
-  a.active {
-    background: none;
-    color: #0082e6;
-  }
-
-  #check:checked~ul {
-    left: 0;
-  }
+    padding: 40px 20px;
 }
 
-section {
-  background: url("bg.jpg") no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
+main h1 {
+    font-size: 2.5rem;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Add smooth transitions for interactive elements */
+a, .checkbtn {
+    transition: all 0.3s ease-in-out;
 }

@@ -116,3 +116,79 @@ section {
   background-size: cover;
   height: calc(100vh - 80px);
 }
+
+/* Container and Table of Contents */
+  .container {
+    padding: 80px 30px 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+  }
+  
+  caption {
+    font-size: 1rem;
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Info Cards Section */
+  .info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  /* Hover effect for cards */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav label.checkbtn {
+      display: block;
+      cursor: pointer;
+    }
+  
+    nav .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav input[type="checkbox"]:checked + .checkbtn + .nav-links {
+      display: flex;
+    }
+  
+    .container {
+      padding: 80px 15px;
+    }

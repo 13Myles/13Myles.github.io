@@ -86,7 +86,7 @@ nav ul li a {
 
 a.active,
 a:hover {
-  background: #1b9bff;
+  background: #ff99ff;
   transition: 0.5s;
 }
 
